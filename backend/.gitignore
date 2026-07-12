@@ -1,0 +1,12 @@
+node_modules/
+.env
+uploads/videos/*
+uploads/pdfs/*
+uploads/ppts/*
+uploads/avatars/*
+!uploads/videos/.gitkeep
+!uploads/pdfs/.gitkeep
+!uploads/ppts/.gitkeep
+!uploads/avatars/.gitkeep
+npm-debug.log*
+.DS_Store
