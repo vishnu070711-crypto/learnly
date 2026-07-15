@@ -72,7 +72,10 @@ app.use(errorHandler);
 const startServer = async () => {
   try {
     await connectDB();
-    await seedDemoData();
+
+    if (process.env.VERCEL !== '1') {
+      await seedDemoData();
+    }
 
     if (process.env.NODE_ENV !== 'production' || process.env.VERCEL !== '1') {
       const PORT = process.env.PORT || 5000;

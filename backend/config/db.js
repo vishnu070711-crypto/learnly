@@ -33,8 +33,12 @@ const connectDB = async () => {
       tls: true,
     });
     console.log(`MongoDB connected: ${conn.connection.host}`);
+    return conn;
   } catch (error) {
     console.error(`MongoDB connection error: ${error.message}`);
+    if (process.env.VERCEL === '1') {
+      return null;
+    }
     process.exit(1);
   }
 };
