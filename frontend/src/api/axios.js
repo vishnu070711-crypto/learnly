@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiBaseUrl = import.meta.env.VITE_API_URL=https://learnly-back.onrender.com || '/api';
+const apiBaseUrl = import.meta.env.VITE_API_URL || 'https://learnly-back.onrender.com';
 const api = axios.create({
   baseURL: apiBaseUrl,
 });
