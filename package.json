@@ -9,7 +9,7 @@
   "description": "A full-featured online learning platform built with **MongoDB, Express.js, React (Vite) and Node.js**, styled with **Material‑UI**.",
   "main": "modules/server.js",
   "scripts": {
-    "start": "cd backend && npm install && npm start",
+    "start": "cd backend && npm start",
     "test": "echo \"No tests specified\"",
     "backend": "cd backend && npm install && npm run dev",
     "frontend": "cd frontend && npm install && npm run dev",
