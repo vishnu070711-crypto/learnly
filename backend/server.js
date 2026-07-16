@@ -31,9 +31,13 @@ app.use(
     crossOriginResourcePolicy: false, // allow media/pdf embedding from a different origin (frontend dev server)
   })
 );
+// Allow CORS from configured client origin(s).
+// `CLIENT_URL` can be a single origin or comma-separated origins (useful for Vercel).
+// If not provided, reflect the request origin (useful in staging or quick deployments).
+const allowedOrigins = process.env.CLIENT_URL ? process.env.CLIENT_URL.split(',') : true;
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
+    origin: allowedOrigins,
     credentials: true,
   })
 );
